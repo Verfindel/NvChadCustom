@@ -25,6 +25,11 @@ local plugins = {
     opts = {
       ensure_installed = {
         "rust-analyzer",
+        "lua-language-server",
+        "typescript-language-server",
+        "svelte-language-server",
+        "elm-language-server",
+        "csharp-language-server",
       },
     },
   },
