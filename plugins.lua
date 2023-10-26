@@ -2,6 +2,17 @@ local cmp = require "cmp"
 
 local plugins = {
   {
+    "nvimtools/none-ls.nvim",
+    event = "VeryLazy",
+    opts = function ()
+      return require "custom.configs.none-ls"
+    end
+  },
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
+  {
     "zaptic/elm-vim",
     ft = "elm",
     config = function ()
@@ -10,6 +21,13 @@ local plugins = {
       vim.g.syntastic_auto_loc_list = 1
       vim.g.elm_syntastic_show_warnings = 1
     end
+  },
+  {
+    "Omnisharp/omnisharp-roslyn",
+  },
+  {
+    "Omnisharp/omnisharp-vim",
+    ft = "cs",
   },
   {
     "theprimeagen/harpoon",
@@ -29,6 +47,8 @@ local plugins = {
         "rust-analyzer",
         "lua-language-server",
         "typescript-language-server",
+        "eslint-lsp",
+        "prettier",
         "svelte-language-server",
         "elm-language-server",
         "csharp-language-server",

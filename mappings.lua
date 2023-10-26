@@ -1,5 +1,26 @@
 local M = {}
 
+M.disabled = {
+  n = {
+    ["<C-u>"] = "",
+    ["<C-d>"] = "",
+    ["<C-f>"] = "",
+    ["n"] = "",
+    ["N"] = "",
+  }
+}
+
+M.myNav = {
+  n = {
+    ["<C-u>"] = { "<C-u>zz" },
+    ["<C-d>"] = {"<C-d>zz"},
+    ["n"] = {"nzzzv"},
+    ["N"] = {"Nzzzv"},
+    ["<C-f>"] = {":/<C-r><C-w>"},
+    ["<leader>fr"] = {":%s/<C-r><C-w>/<C-r><C-w>"},
+  }
+}
+
 M.harpoon = {
   n = {
     ["<leader>ha"] = {
