@@ -18,9 +18,14 @@ M.myNav = {
     ["N"] = {"Nzzzv"},
     ["<C-f>"] = {":/<C-r><C-w>"},
     ["<leader>fr"] = {":%s/<C-r><C-w>/<C-r><C-w>"},
+  },
+  v = {
+    ["J"] = {":m '>+1<CR>gv=gv"},
+    ["K"] = {":m '<-2<CR>gv=gv"},
   }
 }
-
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv");
+-- 	vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv");
 M.harpoon = {
   n = {
     ["<leader>ha"] = {
