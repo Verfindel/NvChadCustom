@@ -2,6 +2,27 @@ local cmp = require "cmp"
 
 local plugins = {
   {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      {
+          "nvim-telescope/telescope-live-grep-args.nvim" ,
+          -- This will not install any breaking changes.
+          -- For major updates, this must be adjusted manually.
+          version = "^1.0.0",
+      },
+    },
+    config = function()
+      require("telescope").load_extension("live_grep_args")
+    end
+  },
+  {
+    "tpope/vim-fugitive",
+    lazy = false,
+  },
+  {
+    "jlcrochet/vim-cs",
+  },
+  {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function ()
@@ -23,13 +44,6 @@ local plugins = {
     end
   },
   {
-    "Omnisharp/omnisharp-roslyn",
-  },
-  {
-    "Omnisharp/omnisharp-vim",
-    ft = "cs",
-  },
-  {
     "theprimeagen/harpoon",
     lazy = false,
   },
@@ -48,7 +62,7 @@ local plugins = {
         "lua-language-server",
         "typescript-language-server",
         "eslint-lsp",
-        "prettier",
+        --"prettier",
         "svelte-language-server",
         "elm-language-server",
         "csharp-language-server",

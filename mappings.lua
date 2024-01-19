@@ -7,6 +7,18 @@ M.disabled = {
     ["<C-f>"] = "",
     ["n"] = "",
     ["N"] = "",
+    ["<leader>fw"] = "",
+  }
+}
+
+M.Telescope = {
+  n = {
+    ["<leader>fw"] = {
+      function ()
+        require('telescope').extensions.live_grep_args.live_grep_args()
+      end,
+      "Live grep args",
+    },
   }
 }
 
@@ -16,12 +28,12 @@ M.myNav = {
     ["<C-d>"] = {"<C-d>zz"},
     ["n"] = {"nzzzv"},
     ["N"] = {"Nzzzv"},
-    ["<C-f>"] = {":/<C-r><C-w>"},
-    ["<leader>fr"] = {":%s/<C-r><C-w>/<C-r><C-w>"},
+    ["<C-f>"] = {":/<C-r><C-w>", "Search for word / symbols under cursor"},
+    ["<leader>fr"] = {":%s/<C-r><C-w>/<C-r><C-w>", "Replace text under cursor"},
   },
   v = {
-    ["J"] = {":m '>+1<CR>gv=gv"},
-    ["K"] = {":m '<-2<CR>gv=gv"},
+    ["J"] = {":m '>+1<CR>gv=gv", "Move selected line / block of text in visual mode down"},
+    ["K"] = {":m '<-2<CR>gv=gv", "Move selected line / block of text in visual mode up"},
   }
 }
 -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv");
