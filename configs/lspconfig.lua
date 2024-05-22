@@ -3,7 +3,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = { "elmls", "tsserver", "omnisharp", "svelte"}
+local servers = { "elmls", "tsserver", "omnisharp", "svelte", "eslint"}
 
 for _, lsp in ipairs(servers) do
     if lsp == "omnisharp" then
